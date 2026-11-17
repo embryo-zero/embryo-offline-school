@@ -1157,7 +1157,8 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
     { name = "packaging", version = "24.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8'" },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.8'" },
+    { name = "packaging", version = "26.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*'" },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/98/37/1d8c8a9f9de2588df8f18b36f6a3e4134e362f49a14d0c9b0b02a301ef9e/django-js-reverse-0.10.2.tar.gz", hash = "sha256:ac1664397935ed45ef1e23a80e6df182d766f4559d6dffd049beac92e63bce20", size = 25031, upload-time = "2023-08-14T22:40:32.16Z" }
 wheels = [
@@ -1289,7 +1290,8 @@ dependencies = [
     { name = "django" },
     { name = "djangorestframework" },
     { name = "inflection" },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
     { name = "pytz" },
     { name = "pyyaml", version = "6.0.3", source = { registry = "https://pypi.org/simple" } },
     { name = "uritemplate", version = "4.1.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
@@ -3518,7 +3520,8 @@ source = { virtual = "platforms/debian" }
 dependencies = [
     { name = "distro-info" },
     { name = "packaging", version = "24.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8'" },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.8'" },
+    { name = "packaging", version = "26.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*'" },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
 ]
 
 [package.dev-dependencies]
@@ -3760,7 +3763,7 @@ resolution-markers = [
 dependencies = [
     { name = "jsonpatch" },
     { name = "langsmith", version = "0.4.37", source = { registry = "https://pypi.org/simple" } },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" } },
     { name = "pydantic" },
     { name = "pyyaml", version = "6.0.3", source = { registry = "https://pypi.org/simple" } },
     { name = "tenacity", version = "9.1.2", source = { registry = "https://pypi.org/simple" } },
@@ -3786,7 +3789,7 @@ dependencies = [
     { name = "jsonpatch" },
     { name = "langchain-protocol" },
     { name = "langsmith", version = "0.8.5", source = { registry = "https://pypi.org/simple" } },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" } },
     { name = "pydantic" },
     { name = "pyyaml", version = "6.0.3", source = { registry = "https://pypi.org/simple" } },
     { name = "tenacity", version = "9.1.4", source = { registry = "https://pypi.org/simple" } },
@@ -3866,7 +3869,7 @@ resolution-markers = [
 dependencies = [
     { name = "httpx" },
     { name = "orjson", version = "3.11.5", source = { registry = "https://pypi.org/simple" }, marker = "platform_python_implementation != 'PyPy'" },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" } },
     { name = "pydantic" },
     { name = "requests" },
     { name = "requests-toolbelt" },
@@ -3891,7 +3894,7 @@ resolution-markers = [
 dependencies = [
     { name = "httpx" },
     { name = "orjson", version = "3.11.9", source = { registry = "https://pypi.org/simple" }, marker = "platform_python_implementation != 'PyPy'" },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" } },
     { name = "pydantic" },
     { name = "requests" },
     { name = "requests-toolbelt" },
@@ -5343,7 +5346,20 @@ wheels = [
 
 [[package]]
 name = "packaging"
-version = "26.0"
+version = "26.2"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.8.*' and platform_python_implementation != 'PyPy'",
+    "python_full_version == '3.8.*' and platform_python_implementation == 'PyPy'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d7/f1/e7a6dd94a8d4a5626c03e4e99c87f241ba9e350cd9e6d75123f992427270/packaging-26.2.tar.gz", hash = "sha256:ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661", size = 228134, upload-time = "2026-04-24T20:15:23.917Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/df/b2/87e62e8c3e2f4b32e5fe99e0b86d576da1312593b39f47d8ceef365e95ed/packaging-26.2-py3-none-any.whl", hash = "sha256:5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e", size = 100195, upload-time = "2026-04-24T20:15:22.081Z" },
+]
+
+[[package]]
+name = "packaging"
+version = "26.3"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "python_full_version >= '3.14'",
@@ -5357,12 +5373,10 @@ resolution-markers = [
     "python_full_version > '3.9' and python_full_version < '3.9.2' and platform_python_implementation != 'PyPy'",
     "python_full_version == '3.9' and platform_python_implementation == 'PyPy'",
     "python_full_version == '3.9' and platform_python_implementation != 'PyPy'",
-    "python_full_version == '3.8.*' and platform_python_implementation != 'PyPy'",
-    "python_full_version == '3.8.*' and platform_python_implementation == 'PyPy'",
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz", hash = "sha256:00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4", size = 143416, upload-time = "2026-01-21T20:50:39.064Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz", hash = "sha256:94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79", size = 313412, upload-time = "2026-08-04T18:15:28.737Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b7/b9/c538f279a4e237a006a2c98387d081e9eb060d203d8ed34467cc0f0b9b53/packaging-26.0-py3-none-any.whl", hash = "sha256:b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529", size = 74366, upload-time = "2026-01-21T20:50:37.788Z" },
+    { url = "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl", hash = "sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c", size = 129956, upload-time = "2026-08-04T18:15:27.159Z" },
 ]
 
 [[package]]
@@ -6327,7 +6341,7 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "altgraph" },
     { name = "macholib", marker = "sys_platform == 'darwin'" },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" } },
     { name = "pefile", marker = "sys_platform == 'win32'" },
     { name = "pyinstaller-hooks-contrib" },
     { name = "pywin32-ctypes", marker = "sys_platform == 'win32'" },
@@ -6353,7 +6367,7 @@ name = "pyinstaller-hooks-contrib"
 version = "2026.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" } },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/94/5b/c9fe0db5e83ee1c39b2258fa21d23b15e1a60786b6c5990ee5074ead8bb6/pyinstaller_hooks_contrib-2026.6.tar.gz", hash = "sha256:bef5002c32f4f50bd55b005da12cff64eca8783e7eaf86a06a62410164bab725", size = 173354, upload-time = "2026-06-08T22:37:16.152Z" }
 wheels = [
@@ -6508,7 +6522,8 @@ dependencies = [
     { name = "iniconfig", version = "2.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.8' and python_full_version < '3.10'" },
     { name = "iniconfig", version = "2.3.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10' and python_full_version < '3.14'" },
     { name = "packaging", version = "24.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or python_full_version >= '3.14'" },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.8' and python_full_version < '3.14'" },
+    { name = "packaging", version = "26.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*'" },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9' and python_full_version < '3.14'" },
     { name = "pluggy", version = "1.2.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or python_full_version >= '3.14'" },
     { name = "pluggy", version = "1.5.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*'" },
     { name = "pluggy", version = "1.6.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9' and python_full_version < '3.14'" },
@@ -6530,7 +6545,7 @@ resolution-markers = [
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
     { name = "iniconfig", version = "2.3.0", source = { registry = "https://pypi.org/simple" } },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" } },
     { name = "pluggy", version = "1.6.0", source = { registry = "https://pypi.org/simple" } },
     { name = "pygments" },
 ]
@@ -7051,10 +7066,11 @@ wheels = [
 
 [[package]]
 name = "setuptools-scm"
-version = "10.2.1"
+version = "10.3.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
     { name = "setuptools", version = "68.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "setuptools", version = "75.3.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "setuptools", version = "81.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
@@ -7063,9 +7079,9 @@ dependencies = [
     { name = "typing-extensions", version = "4.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9' and python_full_version < '3.11'" },
     { name = "vcs-versioning" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/5d/b1/d0b97ffd2856a7d19c63024a89fb84813cb9d2ed7fa8fdbedf9e2f13a9ab/setuptools_scm-10.2.1.tar.gz", hash = "sha256:4fa7dd82cf8c800df59c9a288c90299b1657ff1ecfc3f5cc00287c5dbf5e27a9", size = 154237, upload-time = "2026-07-21T08:08:04.553Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/85/d8/fc143f88819ccf10ba2388ba86732ee2de193e578234e25a783f6cc14bf7/setuptools_scm-10.3.4.tar.gz", hash = "sha256:a69f28bfc245608781205e912faae437c2b2165773afa4e7b979d77447a69dd2", size = 78410, upload-time = "2026-09-23T19:21:42.95Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c3/b4/02ac1d9833b882c87b3a4e82703e70eac4ab33d0d15fb123e60bb01f3bc1/setuptools_scm-10.2.1-py3-none-any.whl", hash = "sha256:b7c82f4102d389ee57dc66ccdb4f9b4bca3c40ba83b43f1f63d68ccd72db2580", size = 29078, upload-time = "2026-07-21T08:08:03.293Z" },
+    { url = "https://files.pythonhosted.org/packages/da/f5/54538a1f17ea753c42b0928dc2e62986d463f8c393340b9a1e602f2d4dd9/setuptools_scm-10.3.4-py3-none-any.whl", hash = "sha256:82f34c3e3084fc2b57d397200637cc13f2338004052d2fee47baa5f0e902464e", size = 33366, upload-time = "2026-09-23T19:21:41.607Z" },
 ]
 
 [[package]]
@@ -7099,7 +7115,7 @@ dependencies = [
     { name = "imagesize", version = "2.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "importlib-metadata", marker = "python_full_version < '3.10'" },
     { name = "jinja2" },
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" } },
     { name = "pygments" },
     { name = "requests" },
     { name = "snowballstemmer" },
@@ -7865,17 +7881,18 @@ wheels = [
 
 [[package]]
 name = "vcs-versioning"
-version = "2.2.2"
+version = "2.6.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
     { name = "tomli", marker = "python_full_version < '3.11'" },
     { name = "typing-extensions", version = "4.13.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "typing-extensions", version = "4.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9' and python_full_version < '3.11'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/09/95/c95bb74950763a163defcf4cedf6c5edfca1d623fd5031b76516ece85076/vcs_versioning-2.2.2.tar.gz", hash = "sha256:4ac4ded78720cdb4d0291ae58ace87e1e9201912e1023f3029c6cce5c9152cfb", size = 143135, upload-time = "2026-06-29T13:26:06.901Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ad/e7/2a691db7d076b75d099fdba1a14cd966931f2aeb591e77f6d22f15097326/vcs_versioning-2.6.0.tar.gz", hash = "sha256:22e9159288e2d8bca2fa6f6c31c34c9c66aec157f60e9e526f5d160d2516d60f", size = 166800, upload-time = "2026-10-06T22:21:55.024Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/85/9e/1f06f4ddc3a74ccfe0877490caaf4a5233e65401160afc8cb13207815f5e/vcs_versioning-2.2.2-py3-none-any.whl", hash = "sha256:fe7fb216f8780a5516e7864a9333aacb1b70015b087a9be3918da76ef2760808", size = 108014, upload-time = "2026-06-29T13:26:05.367Z" },
+    { url = "https://files.pythonhosted.org/packages/73/1d/ad4064bf12f4503bf61e65d74c93c523672776d25ee0a06aaf42ae09ef3f/vcs_versioning-2.6.0-py3-none-any.whl", hash = "sha256:f8bebd1302ebc12e67ceb30fc7dd698ec969414b6fa43b30c3f14ac9b1e72c41", size = 123154, upload-time = "2026-10-06T22:21:53.267Z" },
 ]
 
 [[package]]
@@ -8164,7 +8181,7 @@ name = "wheel"
 version = "0.48.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "packaging", version = "26.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "packaging", version = "26.3", source = { registry = "https://pypi.org/simple" } },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/d0/20/50ed6bdf27dec98b568a8ae25dc599f35baa3d9709f9e83fd1edb56b9a90/wheel-0.48.0.tar.gz", hash = "sha256:94800765601e9171bf5d58d066e640662842bcedcbab982b2c90787a2c987322", size = 66471, upload-time = "2026-08-11T22:02:27.327Z" }
 wheels = [
