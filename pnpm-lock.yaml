@@ -10,8 +10,8 @@ catalogs:
       specifier: ^6.6.4
       version: 6.9.1
     '@testing-library/user-event':
-      specifier: ^14.6.1
-      version: 14.6.1
+      specifier: ^14.6.8
+      version: 14.6.8
     '@testing-library/vue':
       specifier: ^5
       version: 5.9.0
@@ -353,7 +353,7 @@ importers:
         version: 6.9.1
       '@testing-library/user-event':
         specifier: 'catalog:'
-        version: 14.6.1(@testing-library/dom@9.3.4)
+        version: 14.6.8(@testing-library/dom@9.3.4)
       '@testing-library/vue':
         specifier: 'catalog:'
         version: 5.9.0(vue-template-compiler@2.7.16)(vue@2.7.16)
@@ -475,7 +475,7 @@ importers:
         version: 6.9.1
       '@testing-library/user-event':
         specifier: 'catalog:'
-        version: 14.6.1(@testing-library/dom@9.3.4)
+        version: 14.6.8(@testing-library/dom@9.3.4)
       '@testing-library/vue':
         specifier: 'catalog:'
         version: 5.9.0(vue-template-compiler@2.7.16)(vue@2.7.16)
@@ -1079,7 +1079,7 @@ importers:
         version: 6.9.1
       '@testing-library/user-event':
         specifier: 'catalog:'
-        version: 14.6.1(@testing-library/dom@9.3.4)
+        version: 14.6.8(@testing-library/dom@9.3.4)
       '@testing-library/vue':
         specifier: 'catalog:'
         version: 5.9.0(vue-template-compiler@2.7.16)(vue@2.7.16)
@@ -1146,7 +1146,7 @@ importers:
         version: 6.9.1
       '@testing-library/user-event':
         specifier: 'catalog:'
-        version: 14.6.1(@testing-library/dom@9.3.4)
+        version: 14.6.8(@testing-library/dom@9.3.4)
       '@testing-library/vue':
         specifier: 'catalog:'
         version: 5.9.0(vue-template-compiler@2.7.16)(vue@2.7.16)
@@ -1304,7 +1304,7 @@ importers:
         version: 6.9.1
       '@testing-library/user-event':
         specifier: 'catalog:'
-        version: 14.6.1(@testing-library/dom@9.3.4)
+        version: 14.6.8(@testing-library/dom@9.3.4)
       '@testing-library/vue':
         specifier: 'catalog:'
         version: 5.9.0(vue-template-compiler@2.7.16)(vue@2.7.16)
@@ -1497,7 +1497,7 @@ importers:
         version: 6.9.1
       '@testing-library/user-event':
         specifier: 'catalog:'
-        version: 14.6.1(@testing-library/dom@9.3.4)
+        version: 14.6.8(@testing-library/dom@9.3.4)
       '@testing-library/vue':
         specifier: 'catalog:'
         version: 5.9.0(vue-template-compiler@2.7.16)(vue@2.7.16)
@@ -3410,6 +3410,7 @@ packages:
   '@khanacademy/wonder-blocks-pill@3.1.68':
     resolution: {integrity: sha512-95lTThE0faaT03x0ICQ840bQ8ITP5yJRiQJScZZuOZSSMKz68B9AizLiux9hjrDY+IFCk909qgPYEEtEnk2R6g==}
     version: 3.1.68
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       aphrodite: ^1.2.5
       react: 18.2.0
@@ -3861,6 +3862,12 @@ packages:
 
   '@testing-library/user-event@14.6.1':
     resolution: {integrity: sha512-vq7fv0rnt+QTXgPxr5Hjc210p6YKq2kmdziLgnsZGgLJ9e6VAShx1pACLuRjd/AS/sr7phAR58OIIpf0LlmQNw==}
+    engines: {node: '>=12', npm: '>=6'}
+    peerDependencies:
+      '@testing-library/dom': '>=7.21.4'
+
+  '@testing-library/user-event@14.6.8':
+    resolution: {integrity: sha512-vgSSqnANMnkcYR/vUNDbwS7aM3OErRLNUG8vCVVlj4oc6cKffUrccX7UAS5AmJQQNZTSibi9z5GvvRZ0aYgUCQ==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
@@ -12839,6 +12846,10 @@ snapshots:
       redent: 3.0.0
 
   '@testing-library/user-event@14.6.1(@testing-library/dom@9.3.4)':
+    dependencies:
+      '@testing-library/dom': 9.3.4
+
+  '@testing-library/user-event@14.6.8(@testing-library/dom@9.3.4)':
     dependencies:
       '@testing-library/dom': 9.3.4
 
