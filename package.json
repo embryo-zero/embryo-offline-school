@@ -41,7 +41,7 @@
   },
   "private": true,
   "devDependencies": {
-    "@crowdin/cli": "^4.14.1",
+    "@crowdin/cli": "^5.6.0",
     "@types/jest": "^30.0.0",
     "@vue/vue2-jest": "^29.2.6",
     "@vueuse/shared": "^11.3.0",
